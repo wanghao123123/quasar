@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package YallaDomino;
+option java_package = "com.example.quasar.protobuf";
+option java_outer_classname = "TestWH";
+
+message Test{
+    int32 id=1;
+    int32 age=2;
+}
+
+message Rep{
+    string code=1;
+}
+
+
+service Session {
+    rpc MsgAdd(Test) returns (Rep) {}
+}
